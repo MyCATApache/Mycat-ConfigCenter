@@ -1,2 +1,2 @@
 # Mycat-ConfigCenter
-this is Mycat-ConfigCenter
+Mycat-ConfigCenter
