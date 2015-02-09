@@ -1,0 +1,7 @@
+    客户端对外暴露一个接口：org.opencloudb.mycat.config.client.IConfig，
+ org.opencloudb.mycat.config.client.ZooKeeperClient作为其一个实现基于zk的实现，使用方法如下：
+   初始化：
+ IConfig client = new ZooKeeperClient(hosts, timeout, "/");
+   获取配置值：
+ String value1 = client.getProp("/config/test");//return the value of the zknode /config/test;if not exists,return null
+ String value2 = client.getProp("/config/test","def");//return the value of the zknode /config/test;if not exists,return def
