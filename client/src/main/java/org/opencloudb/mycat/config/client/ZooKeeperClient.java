@@ -16,6 +16,10 @@ import org.slf4j.LoggerFactory;
  * 查询接口的zookeeper实现，主要功能：
  * 1.监控zookeeper节点变化，并将变化同步至缓存；
  * 2.提供属性查询服务；
+ * example：
+ * IConfig client = new ZooKeeperClient(hosts, timeout, "/");
+ * String value1 = client.getProp("/config/test");//return the value of the zknode /config/test;if not exists,return null
+ * String value2 = client.getProp("/config/test","def");//return the value of the zknode /config/test;if not exists,return def
  *
  */
 public class ZooKeeperClient implements IConfig {
